@@ -1,3 +1,79 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const currentPage = window.location.pathname; // Get the current page path
+
+    // Shop Page Logic
+    if (currentPage.includes('shop.html')) {
+        const shopContainer = document.querySelector('.shop');
+
+        const fetchCategory = (category) => {
+            return fetch(`https://fakestoreapi.com/products/category/${category}`)
+                .then(response => response.json());
+        };
+
+        // Fetch products for two categories: "men's clothing" and "women's clothing"
+        Promise.all([
+            fetchCategory("men's clothing"),
+            fetchCategory("women's clothing")
+        ])
+            .then(results => {
+                const products = results.flat(); // Merge both category results into one array
+                let row;
+                products.forEach((product, index) => {
+                    if (index % 3 === 0) {
+                        row = document.createElement('div');
+                        row.classList.add('product-row');
+                        shopContainer.appendChild(row);
+                    }
+
+                    const productCard = document.createElement('div');
+                    productCard.classList.add('product-card');
+                    productCard.dataset.productId = product.id; // Store product ID in a data attribute
+
+                    productCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.title}" class="product-image">
+                    <h2 class="product-title">${product.title}</h2>
+                    <p class="product-price">Price: $${product.price}</p>
+                `;
+
+                    // Add event listener to each product card
+                    productCard.addEventListener('click', () => {
+                        const productId = productCard.dataset.productId;
+                        window.location.href = `details.html?productId=${productId}`; // Redirect to details page with productId
+                    });
+
+                    row.appendChild(productCard);
+                });
+            })
+            .catch(error => console.error('Error fetching products:', error));
+    }
+
+    // Product Details Page Logic
+    else if (currentPage.includes('details.html')) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('productId'); // Get productId from URL query string
+
+        if (productId) {
+            // Fetch product details based on productId
+            fetch(`https://fakestoreapi.com/products/${productId}`)
+                .then(response => response.json())
+                .then(product => {
+                    const productContainer = document.querySelector('.product-details'); // Ensure this exists in HTML
+
+                    // Display product details
+                    productContainer.innerHTML = `
+                        <img src="${product.image}" alt="${product.title}" class="product-image">
+                        <h1 class="product-title">${product.title}</h1>
+                        <p class="product-description">${product.description}</p>
+                        <p class="product-price">Price: ${product.price}$</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    `;
+                })
+                .catch(error => console.error('Error fetching product details:', error));
+        } else {
+            console.log('Product ID not found in the URL');
+        }
+    }
+});
 
 
 //  SHOW MENU       in medium and small devices
@@ -145,7 +221,7 @@ if (registerButton) {
 if (formClose) {
     formClose.addEventListener("click", () => {
         login.classList.remove('show-login')
-        register.classList.remove('show-register')  
+        register.classList.remove('show-register')
     })
 }
 
