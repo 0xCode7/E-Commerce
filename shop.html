@@ -7,234 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<<<<<<< HEAD
-                
-                <!-- swiper css -->
-    
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-   
-                <!-- css -->
-   
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/colors/color-1.css">
-=======
-
     <!-- swiper css -->
-    <link rel="stylesheet" href="assest/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
     <!-- css -->
-    <link rel="stylesheet" href="assest/css/style.css">
-    <link rel="stylesheet" href="assest/css/colors/color-1.css">
-    
->>>>>>> e4b6811362f93347389634ee6f912db00ddf0426
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/colors/color-1.css">
+
     <title>Shop</title>
 </head>
 
 <body>
-<<<<<<< HEAD
-<!--=================== HEADER ================= -->
-<header class="header" id="header">
-    <nav class="nav container">
-        <a href="index.html" class="nav__logo">
-            <i class="bx bxs-shopping-bags nav__logo-icon"></i>e-shopper
-        </a>
-
-        <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list">
-
-               <li class="nav__item">
-                <a href="index.html" class="nav__link active-link">Home</a>
-               </li>
-               
-               <li class="nav__item">
-                <a href="shop.html" class="nav__link">Shop</a>
-               </li>
-
-               <li class="nav__item">
-                <a href="cart.html" class="nav__link">Cart</a>
-               </li>
-
-               <li class="nav__item">
-                <a href="blog.html" class="nav__link">Blog</a>
-               </li>
-
-               <li class="nav__item">
-                <a href="faq.html" class="nav__link">Faq's</a>
-               </li>
-
-               <li class="nav__item">
-                <a href="contact.html" class="nav__link">Contact</a>
-               </li>
-            </ul>
-
-            <div class="nav__close" id="nav-close">
-                <i class="bx bx-x"></i>
-            </div>
-        </div>
-
-        <div class="nav__btns">
-            <div class="login__toggle" id="login-button">
-                <i class="bx bx-user"></i>
-            </div>
-            <div class="nav__shop" id="cart-shop">
-                <i class="bx bx-shopping-bag"></i>
-            </div>
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="bx bx-grid-alt"></i>
-            </div>
-        </div>
-    </nav>
-
-</header>
-
-
-<!-- =============cart=============== -->
-<div class="cart " id="cart">   
-    <!-- show cart aside cart -->
-    <i class="bx bx-x cart__close" id="cart-close"></i>
-
-    <h2 class="cart__title-center">My Cart</h2>
-
-    <div class="cart__container">
-
-        <article class="cart__card">
-            <div class="cart__box">
-                <img src="assets/img/cart-1.webp" alt="" class="cart__img">
-            </div>
-
-            <div class="cart__details">
-                <h3 class="cart__title">Cardigan Hoodie</h3>
-                <span class="cart__price">$16</span>
-
-                <div class="cart__amount">
-                    <div class="cart__amount-content">
-                        <span class="cart__amount-box">
-                            <i class="bx bx-minus"></i>
-                        </span>
-
-                        <span class="cart__amount-number">1</span>
-
-                        <span class="cart__amount-box">
-                            <i class="bx bx-plus"></i>
-                        </span>
-
-                    </div>
-                    <i class="bx bx-trash-alt cart__amount-trash"></i>
-                </div>
-            </div>
-        </article>
-
-        <article class="cart__card">
-            <div class="cart__box">
-                <img src="assets/img/cart-2.webp" alt="" class="cart__img">
-            </div>
-
-            <div class="cart__details">
-                <h3 class="cart__title">Cardigan Hoodie</h3>
-                <span class="cart__price">$12</span>
-
-                <div class="cart__amount">
-                    <div class="cart__amount-content">
-                        <span class="cart__amount-box">
-                            <i class="bx bx-minus"></i>
-                        </span>
-
-                        <span class="cart__amount-number">1</span>
-
-                        <span class="cart__amount-box">
-                            <i class="bx bx-plus"></i>
-                        </span>
-
-                    </div>
-                    <i class="bx bx-trash-alt cart__amount-trash"></i>
-                </div>
-            </div>
-        </article>
-
-        <article class="cart__card">
-            <div class="cart__box">
-                <img src="assets/img/cart-3.webp" alt="" class="cart__img">
-            </div>
-
-            <div class="cart__details">
-                <h3 class="cart__title">Men Coat</h3>
-                <span class="cart__price">$25</span>
-
-                <div class="cart__amount">
-                    <div class="cart__amount-content">
-                        <span class="cart__amount-box">
-                            <i class="bx bx-minus"></i>
-                        </span>
-
-                        <span class="cart__amount-number">1</span>
-
-                        <span class="cart__amount-box">
-                            <i class="bx bx-plus"></i>
-                        </span>
-
-                    </div>
-                    <i class="bx bx-trash-alt cart__amount-trash"></i>
-                </div>
-            </div>
-        </article>
-
-    </div>
-
-    <div class="cart__prices">
-        <span class="cart__prices-item">3 item</span>
-        <span class="cart__prices-total">$38</span>
-    </div>
-</div>
-
-
-<!-- ===============login============== -->
-
-<div class="login" id="login">
-    <i class="bx bx-x login__close" id="login-close"></i>
-
-    <h2 class="login__title-center">Login</h2>
-
-    <form action="" class="login__form grid">
-        <label for="emailInput" class="login__label">Email</label>
-        <div class="login__content">
-            <input type="email" id="emailInput" class="login__input">
-        </div>
-
-        <label for="passwordInput" class="login__label">Password</label>
-        <div class="login__content">
-            <input type="password" id="passwordInput" class="login__input">
-        </div>
-
-        <div>
-            <a href="#" class="button">Sign in</a>
-        </div>
-
-        <div>
-            <p class="signup">Not a member? <a href="registration.html">Sign up now</a></p>
-        </div>
-
-    </form>
-</div>
-
-<!-- =============== SHOP =============== -->
-<div class="container ">
-    hello
-</div>
-
-<!-- =========== FOOTER ========= -->
-<footer class="footer section">
-    <div class="footer__container container grid">
-        <!-- FOOTER CONTENT 1 -->
-        <div class="footer__content">
-            <a href="#" class="footer__logo">
-                <i class="bx bxs-shopping-bags footer__logo-icon"></i>
-=======
     <!--=================== HEADER ================= -->
     <header class="header" id="header">
         <nav class="nav container">
             <a href="index.html" class="nav__logo">
                 <i class="bx bxs-shopping-bags nav__logo-icon"></i>e-shopper
->>>>>>> e4b6811362f93347389634ee6f912db00ddf0426
+                <<<<<<< HEAD>>>>>>> e4b6811362f93347389634ee6f912db00ddf0426
+                    =======
+                    >>>>>>> f8758a1a877c2e77b4806eb20adad8fb9a1fc64d
             </a>
 
             <div class="nav__menu" id="nav-menu">
@@ -287,7 +78,7 @@
     <div class="products container" id="products"></div>
 
     <!-- =============cart=============== -->
-    
+
 
     <!-- ===============login============== -->
     <div class="login" id="login">
@@ -333,8 +124,8 @@
                 <p class="footer__description">Enjoy the biggest sale <br> of your life.</p>
 
                 <div class="footer__social">
-                    <a href="https://www.facebook.com/mahmoud.atef.58555941" target="_blank" class="footer__social-link"><i
-                            class="bx bxl-facebook"></i></a>
+                    <a href="https://www.facebook.com/mahmoud.atef.58555941" target="_blank"
+                        class="footer__social-link"><i class="bx bxl-facebook"></i></a>
                     <a href="https://www.instagram.com/mahmoud_atef.34/" target="_blank" class="footer__social-link"><i
                             class="bx bxl-instagram-alt"></i></a>
                     <a href="https://x.com/Mahmoud_1288?t=z0V5BM20OEe41xQVvwIRYw&s=09" target="_blank"
@@ -355,14 +146,6 @@
             <!-- FOOTER CONTENT 3 -->
             <div class="footer__content">
                 <h3 class="footer__title">Our Services</h3>
-
-<<<<<<< HEAD
-<!-- ================== SWIPER JS ======================= -->
-<script src="assets/js/"></script>
-
-<!-- ================== JS ======================= -->
-<script src="assets/js/swiper-bundle.min.js"></script>
-=======
                 <ul class="footer__links">
                     <li><a href="#" class="footer__link">Free Delivery</a></li>
                     <li><a href="#" class="footer__link">Express Delivery</a></li>
@@ -375,31 +158,31 @@
                 <h3 class="footer__title">Our Address</h3>
 
                 <ul class="footer__links">
-                    <li class="footer__information"><i class="bx bx-map footer__icon"></i> Egypt, Assiut</li>
-                    <li class="footer__information"><i class="bx bx-envelope footer__icon"></i> Mahmoudatef9525@gmail.com
+                    <li class="footer__information"><i class="bx bx-map footer__icon"></i> Egypt, Assiut
                     </li>
-                    <li class="footer__information"><i class="bx bx-phone footer__icon"></i> +201277260437</li>
+                    <li class="footer__information"><i class="bx bx-envelope footer__icon"></i>
+                        Mahmoudatef9525@gmail.com
+                    </li>
+                    <li class="footer__information"><i class="bx bx-phone footer__icon"></i>
+                        +201277260437</li>
                 </ul>
             </div>
         </div>
->>>>>>> e4b6811362f93347389634ee6f912db00ddf0426
 
         <div class="footer__copy container">
             <p>&#169; Mahmoud Atef. All right reserved</p>
         </div>
     </footer>
 
-<<<<<<< HEAD
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js">
+    </script>
 
 
-=======
     <!-- swiper js -->
-    <script src="assest/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
 
     <!-- JavaScript -->
-    <script src="assest/js/main.js"></script>
->>>>>>> e4b6811362f93347389634ee6f912db00ddf0426
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
